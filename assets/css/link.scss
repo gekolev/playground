@@ -1,0 +1,31 @@
+// UNDERLINE LINK
+.link {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    background-color: currentColor;
+    transition: 0.4s;
+    transform-origin: left;
+  }
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+    }
+  }
+  &.reversed {
+    &:after {
+      transform: scaleX(1);
+    }
+    &:hover {
+      &::after {
+        transform: scaleX(0);
+      }
+    }
+  }
+}

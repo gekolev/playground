@@ -1,0 +1,45 @@
+$mobileBase: 3.733;
+$tabletBase: 1.82;
+$desktopBase: .833;
+
+:root{
+    --font-size: #{$mobileBase + vw};
+    --font-size-md: #{$tabletBase + vw};
+    --font-size-xl: #{$desktopBase + vw};
+}
+
+html{
+    font-size: var(--font-size);
+    @include media-breakpoint-up(sm) {
+        font-size: var(--font-size-sm);
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: var(--font-size-xl);
+    }
+}
+
+@function calcMobile($size) {
+    @return ($size / 375) * 100rem / $mobileBase;
+}
+
+@function calcTablet($size) {
+    @return ($size / 768) * 100rem / $tabletBase;
+}
+
+@function calcDesktop($size) {
+    @return ($size / 1920) * 100rem / $desktopBase;
+}
+
+$fontConfig: (
+  xs: (
+      f1: (calcMobile(67), .93, -.02),
+  ),
+
+  sm: (
+      f1: (calcTablet(64), .93, -.02),
+  ),
+
+  xl: (
+      f1: (calcDesktop(142), .93, -.02),
+  )
+);

@@ -1,0 +1,15 @@
+// COLOR CLASSES
+$siteColors: ();
+$siteColors: map-merge((
+    "white":  var(--white),
+    "black":  var(--black),
+), $siteColors);
+
+@each $name, $color in $siteColors {
+  .color-#{$name} {
+    color: $color;
+  }
+  .bg-#{$name} {
+    background-color: $color;
+  }
+}

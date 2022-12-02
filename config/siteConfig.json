@@ -1,0 +1,13 @@
+{
+    "title": "Boilerplate",
+    "description": "Boilerplate description",
+    "defaultImage": "image_url_goes_here._full_path_including_https",
+    "twitterCard": "summary_large_image",
+    "defaultLocale": "en",
+    "locales": [
+      "en"
+    ],
+    "multilanguage": false,
+    "production_url": "http://boilerplate.com/",
+    "gtmID": "GTM-XXXXXX"
+}

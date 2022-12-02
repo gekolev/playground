@@ -1,0 +1,69 @@
+{
+    
+    "page": [
+        {
+            "value": "title",
+            "key": "fields.metaTitle",
+            "fallback_key" : "fields.title",
+            "default_key": "title",
+            "prependTitle": true,
+            "attribute": "name"
+        },
+
+        {
+            "value": "description",
+            "key": "fields.metaDescription",
+            "default_key": "description",
+            "attribute": "name"
+        },
+        {
+            "value": "og:title",
+            "key": "fields.metaTitle",
+            "fallback_key" : "fields.title",
+            "default_key": "title",
+            "prependTitle": true,
+            "attribute": "property"
+        },
+        {
+            "value": "og:description",
+            "key": "fields.metaDescription",
+            "default_key": "description",
+            "attribute": "property"
+        },
+        {
+            "value": "twitter:title",
+            "key": "fields.metaTitle",
+            "fallback_key" : "fields.title",
+            "default_key": "title",
+            "prependTitle": true,
+            "attribute": "name"
+        },
+
+        {
+            "value": "twitter:image",
+            "key": "fields.metaImage.fields.file.url",
+            "default_key": "defaultImage",
+            "attribute": "name"
+        },
+
+        {
+            "value": "twitter:description",
+            "key": "fields.metaDescription",
+            "default_key": "description",
+            "attribute": "name"
+        },
+        {   
+            "value": "twitter:card",
+            "key": "",
+            "default_key": "twitterCard",
+            "attribute": "name"
+        },
+        {
+            "value": "og:image",
+            "key": "fields.metaImage.fields.file.url",
+            "default_key": "defaultImage",
+            "attribute": "property"
+        }
+    ]
+    
+}

@@ -1,0 +1,25 @@
+/*! purgecss start ignore */
+html,
+body {
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-overflow-scrolling: touch;
+   font-family: Arial;
+}
+
+.isMobile {
+    .page, .scroll-wrapper {
+        position: relative!important;
+        height: auto!important
+    }
+
+    &, body {
+        overflow: visible;
+    }
+}
+
+
+figure.synchronized-image-div{
+    margin-bottom: 0;
+}
+/*! purgecss end ignore */

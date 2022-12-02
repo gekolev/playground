@@ -1,0 +1,17 @@
+/* MAIN CSS STYLES */
+@import "./custom.scss";
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~/assets/css/fontStyles.scss';
+@import '~/assets/css/utilities.scss';
+@import '~/assets/css/typography.scss';
+@import '~/assets/css/colors.scss';
+@import '~/assets/css/general.scss';
+@import '~/assets/css/btn.scss';
+@import '~/assets/css/forms.scss';
+@import '~/assets/css/deviceHeights.scss';
+@import '~/assets/css/link.scss';
+
+/*! purgecss start ignore */
+@import '~synchronized-components/dist/synchronized-components';
+/*! purgecss end ignore */

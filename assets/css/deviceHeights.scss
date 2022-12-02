@@ -1,0 +1,22 @@
+/*! purgecss start ignore */
+$viewportHeights: (
+  "android": 55px, 
+  "ios-chrome": 105px,
+  "ios-safari": 113px,
+  "ios-safari15": 76px
+);
+
+.viewport-height {
+  height: 100vh;
+}
+
+@each $name, $value in $viewportHeights {
+ .#{$name} {
+    @include media-breakpoint-down(md) {
+      .viewport-height {
+        height: calc(100vh - #{$value});
+      }
+    }
+  }
+}
+/*! purgecss end ignore */

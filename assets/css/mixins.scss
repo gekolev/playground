@@ -1,0 +1,21 @@
+$sizes: (
+  "xs": var(--xs), 
+  "sm": var(--sm),
+  "md": var(--md),
+  "lg": var(--lg),
+  "xl": var(--xl),
+  "xxl": var(--xxl)
+);
+
+@mixin generateProportions() {
+    position: relative;
+    @each $name, $value in $sizes {
+      @if $name == 'xs' {
+        padding-bottom: $value;
+      } @else {
+        @include media-breakpoint-up($name) {
+          padding-bottom: $value;
+        }
+      }
+    }
+}

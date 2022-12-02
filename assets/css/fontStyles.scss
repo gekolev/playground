@@ -1,0 +1,30 @@
+@import '~/assets/css/fontConfig.scss';
+
+@mixin fontStyles($size, $height, $letterSpacing, $important: false) {
+    $suffix: if($important, " !important", "");
+    font-size: $size#{$suffix};
+    line-height: $height#{$suffix};
+    letter-spacing: $letterSpacing + em #{$suffix};
+}
+
+@mixin generateFontStyles($values, $key: false) {
+    @each $className, $cssValues in $values {
+      $suffix: if($key, "-" + $key, "");
+      .#{$className}#{$suffix} {
+        @include fontStyles(nth($cssValues, 1), nth($cssValues, 2), nth($cssValues, 3), $key);
+      }
+    }
+}
+
+@each $key, $values in $fontConfig {
+    @if $key == 'mobile' {
+      // MOBILE - NO SUFFIXES (h1)
+      @include generateFontStyles($values)
+    } @else {
+      // MEDIA QUERIES - WITH SUFFIXES (.h1-md)
+      @include media-breakpoint-up($key) {
+        @include generateFontStyles($values);
+        @include generateFontStyles($values, $key)
+      }
+    }
+}
